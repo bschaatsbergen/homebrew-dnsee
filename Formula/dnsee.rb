@@ -5,21 +5,21 @@
 class Dnsee < Formula
   desc "Check DNS configurations quickly"
   homepage "https://github.com/bschaatsbergen/dnsee"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.4.0/dnsee_0.4.0_darwin_amd64.tar.gz"
-      sha256 "5e874f0bc2f7f1b6f04fba1e8411caca0605fd2d4497481f91924c624cfe30f2"
+      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.5.0/dnsee_0.5.0_darwin_amd64.tar.gz"
+      sha256 "11a053edcfd12b1992da1c73f276ccc71bc84d2b19ef073f03bea5152314227b"
 
       def install
         bin.install "dnsee"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.4.0/dnsee_0.4.0_darwin_arm64.tar.gz"
-      sha256 "eba4302d211c202ad24b0280a1b75f84802382bf354540e635ae7a10474a951b"
+      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.5.0/dnsee_0.5.0_darwin_arm64.tar.gz"
+      sha256 "d84810368811f3c208af4b9e6ecf216f3070aa2fff31de00a1bad22f2128ef17"
 
       def install
         bin.install "dnsee"
@@ -28,17 +28,17 @@ class Dnsee < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.4.0/dnsee_0.4.0_linux_arm64.tar.gz"
-      sha256 "f15c233cc3d4b7e9a53af0d8eeadaa59d88de89c65cce43c6945e24fb77eb02e"
+    if Hardware::CPU.intel?
+      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.5.0/dnsee_0.5.0_linux_amd64.tar.gz"
+      sha256 "6be060c9073a909504c0e6fafa0ee8fb2def01ed3597ac5dbeb80f4dc1aa0259"
 
       def install
         bin.install "dnsee"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.4.0/dnsee_0.4.0_linux_amd64.tar.gz"
-      sha256 "55032c0ed4ee45f805ce7cbb22916477b8af857772be2506bc88f23e4a620788"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bschaatsbergen/dnsee/releases/download/v0.5.0/dnsee_0.5.0_linux_arm64.tar.gz"
+      sha256 "dda9a75d3c97f03b5df50c3de8aa5663409cd692e7e126cecd6a020b8adc401a"
 
       def install
         bin.install "dnsee"
